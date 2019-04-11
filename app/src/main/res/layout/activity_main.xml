@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvHeight"
+        style="@style/tvStyle"
+        android:text="Your Height:"
+        android:textSize="20dp"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        />
+
+    <EditText
+        android:id="@+id/etHeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_toRightOf="@+id/tvHeight"
+        android:gravity="center"
+        android:hint="(centimeters)"
+        android:inputType="number"/>
+
+    <TextView
+        android:id="@+id/tvWeight"
+        style="@style/tvStyle"
+        android:text="Your Weight:"
+        android:textSize="20dp"
+        android:layout_below="@+id/tvHeight"
+        />
+    <EditText
+        android:id="@+id/etWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etHeight"
+        android:layout_toRightOf="@+id/tvHeight"
+        android:hint="(kilograms)"
+        android:gravity="center"
+        android:inputType="number"
+        />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCalc"
+        android:layout_below="@+id/etWeight"
+        android:layout_toRightOf="@+id/tvWeight"
+        android:text="Compute BMI"
+        android:layout_margin="10dp"
+        android:background="@android:color/holo_blue_light"
+        />
+    <TextView
+        android:id="@+id/tvBMI"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Your BMI:"
+        android:layout_centerInParent="true"
+        android:textSize="20dp"
+        />
+    <EditText
+        android:id="@+id/etBMI"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:hint="0"
+        android:layout_below="@+id/tvBMI"
+        android:layout_centerInParent="true"
+        android:textSize="20dp"
+        />
+
+
+</RelativeLayout>
